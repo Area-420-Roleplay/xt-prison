@@ -4,7 +4,7 @@
         "new_time_by_roster":"New Jail Time",
         "new_time_by_roster_description":"Your jail time was set to %s months!",
         "unjailed_by_roster":"Your jail time was set to zero, you're being released!",
-        "no_access":"You don't have access to this command!",
+        "no_access":"You don't have access!",
         "updated_players_time":"Updated %s's Jail Time to %s Months",
         "player_sent":"Sent %s to Jail for %s Months",
         "time_updated_description":"Your jail time was set to %s months",

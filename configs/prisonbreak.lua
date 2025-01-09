@@ -23,17 +23,17 @@ return {
     },
 
     HackZones = {                                   -- Gate = Name of door in ox_doorlock database
-        { coords = vec3(1846.05, 2604.7, 45.65), gate = 'prison 1', radius = 0.4 },
-        { coords = vec3(1819.55, 2604.7, 45.6),  gate = 'prison 2', radius = 0.4 },
-        { coords = vec3(1817.4, 2602.7, 45.65),  gate = 'prison 2', radius = 0.4 },
-        { coords = vec3(1843.95, 2602.7, 45.65), gate = 'prison 2', radius = 0.4 },
+        { coords = vec3(1846.05, 2604.7, 45.65), gate = 'Prison Exterior Main 1', radius = 0.4 },
+        { coords = vec3(1843.95, 2602.7, 45.65), gate = 'Prison Exterior Main 1', radius = 0.4 },
+        { coords = vec3(1819.55, 2604.7, 45.6),  gate = 'Prison Exterior Main 2', radius = 0.4 },
+        { coords = vec3(1817.4, 2602.7, 45.65),  gate = 'Prison Exterior Main 2', radius = 0.4 },
         -- { coords = vec3(1804.75, 2616.25, 45.6), gate = 'prison 3', radius = 0.4 }, -- These gates are perma locked?
         -- { coords = vec3(1804.75, 2617.65, 45.6), gate = 'prison 4', radius = 0.4 }
     },
 
     GateHackMinigame = function(gateID)             -- Use any minigame you want, return success or fail
-        local difficulty = { 'easy', 'easy' }
-        local keys = { 'w', 's' }
+        local difficulty = { { areaSize = 15, speedMultiplier = 0.6 }, { areaSize = 10, speedMultiplier = 0.9 }, { areaSize = 30, speedMultiplier = 1.4 } }
+        local keys = { 'E', 'E' }
         return lib.skillCheck(difficulty, keys)
     end
 }

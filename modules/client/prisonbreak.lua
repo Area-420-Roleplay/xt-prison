@@ -84,7 +84,7 @@ function prisonBreakModules.removeHackZones()
 end
 
 function prisonBreakModules.startGateHack(ID)
-    config.Emote('tablet2')
+    config.Emote('kneel2')
     local setBusy = lib.callback.await('xt-prison:server:setTerminalBusyState', false, ID, true)
     if not setBusy then
         ClearPedTasks(cache.ped)

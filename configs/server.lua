@@ -5,22 +5,25 @@ return {
 
     CanteenMeal = {                             -- Food & Drink received from canteen
         food = {
-            item = 'burger',
+            item = 'prison_food',
             count = 1
         },
         drink = {
-            item = 'water',
+            item = 'prison_water',
             count = 1
         }
     },
 
     AllowedToKeepItems = {                      --  Items found/received in prison that can be kept when released
-        ['money'] = true
+        ['money'] = true,
+        ['cigs'] = true,
+        ['lockpick'] = true,
+        ['steel'] = true
     },
 
     PoliceJobs = {                              -- Police jobs
         'police',
-        'lspd',
+        'bcso',
     },
 
     Lifers = {                                  -- Lifer identifiers

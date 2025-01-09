@@ -1,4 +1,4 @@
-local config    = require 'configs.client'
+--[[local config    = require 'configs.client'
 local utils     = require 'modules.client.utils'
 local resources = require 'bridge.compat.resources'
 
@@ -10,7 +10,7 @@ local function initPrisonDoctor()
 
     local docInfo = config.PrisonDoctor
     prisonDoc = utils.createPed(docInfo.model, docInfo.coords, docInfo.scenario)
-    prisonDocBlip = utils.createBlip('Prison Infirmary', docInfo.coords, 61, 0.3, 1)
+    prisonDocBlip = utils.createBlip('Prison Infirmary', docInfo.coords, 153, 0.8, 1)
     if resources.qb_target then
             exports['qb-target']:AddTargetEntity(prisonDoc, {
                 options = {
@@ -99,3 +99,4 @@ end)
 AddEventHandler('xt-prison:client:onUnload', function()
     removePrisonDoctor()
 end)
+]]--

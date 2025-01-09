@@ -1,12 +1,12 @@
 return {
     DebugPoly = false,
-    Freedom = vec4(1842.58, 2573.43, 45.89, 357.77), -- Freedom spawn coords
+    Freedom = vec4(1837.25, 2588.88, 46.01, 205.71), -- Freedom spawn coords
     RemoveJob = true,          -- Remove player jobs when send to jail
 
     -- Create Target Zone to Check Time (if XTPrisonJobs is false) --
     CheckOut = {
-        coords = vec3(1836.5, 2592.05, 46.35),
-        size = vec3(0.9, 7.8, 1.45),
+        coords = vec3(1828.76, 2580.11, 46.01),
+        size = vec3(1.5, 1.5, 1.5),
         rotation = 0.5,
     },
 
@@ -28,23 +28,25 @@ return {
     -- Canteen Ped --
     CanteenPed = {
         model = 's_m_m_linecook',
-        coords = vector4(1778.31, 2560.56, 45.62, 181.13),
+        coords = vector4(1780.47, 2564.31, 45.67, 2.93),
         scenario = 'PROP_HUMAN_BBQ',
         mealLength = 2
     },
 
     -- Prison Doctor --
+    --[[
     PrisonDoctor = {
         model = 's_m_m_doctor_01',
-        coords = vector4(1746.37, 2467.26, 45.85, 354.14),
+        coords = vector4(1765.39, 2598.54, 45.72, 190.91),
         scenario = 'WORLD_HUMAN_CLIPBOARD',
         healLength = 5
     },
+    ]]--
 
     -- Roster Location --
     RosterLocation = {
-        coords = vec3(1837.45, 2592.95, 45.85),
-        radius = 0.3,
+        coords = vec3(1840.37, 2579.26, 46.01),
+        radius = 0.8,
     },
 
     -- Set Prison Outfits --
@@ -122,24 +124,24 @@ return {
 
     -- Reloads Player's Last Skin When Freed --
     ResetClothing = function()
-        -- TriggerEvent('illenium-appearance:client:reloadSkin', true)
+        TriggerEvent('illenium-appearance:client:reloadSkin', true)
     end,
 
     -- Triggered on Player Heal --
     PlayerHealed = function()
-        -- TriggerEvent('hospital:client:Revive')
+        TriggerEvent('hospital:client:Revive')
         -- TriggerEvent('osp_ambulance:partialRevive')
     end,
 
     -- Trigger Emote --
     Emote = function(emote)
         -- exports.scully_emotemenu:playEmoteByCommand(emote)
-        -- exports["rpemotes"]:EmoteCommandStart(emote)
+        exports["rpemotes"]:EmoteCommandStart(emote)
     end,
 
     -- Trigger Prison Break Dispatch --
     Dispatch = function(coords)
-        -- exports['ps-dispatch']:PrisonBreak()
+        exports['ps-dispatch']:PrisonBreak()
         -- TriggerEvent('police:client:policeAlert', coords, 'Prison Break')
         
        -- ND Core
